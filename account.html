@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="account-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <img src="https://via.placeholder.com/80" alt="User Profile" class="profile-img">
+                <h3>User</h3>
+            </div>
+            <nav class="menu">
+                <a href="#" class="active">Account Information</a>
+                <a href="#">Contact Preferences</a>
+                <a href="login.html">Sign Out</a>
+            </nav>
+            <button class="home-button" onclick="window.location.href='demo.html'">Go to Home</button>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="account-content">
+            <div class="form-container">
+                <h2>Account Information</h2>
+                <p class="description">Update your personal details below:</p>
+                <form class="account-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthdate">Birthdate</label>
+                        <input type="date" id="birthdate" required>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="save-button">Save</button>
+                        <button type="button" class="cancel-button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

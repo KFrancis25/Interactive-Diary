@@ -18,6 +18,7 @@
 
     <!-- Sticky Note Grid -->
     <div class="grid-container">
+        <!-- Sticky notes with unique IDs -->
         <div class="grid-item" data-note="1">Page 1</div>
         <div class="grid-item" data-note="2">Page 2</div>
         <div class="grid-item" data-note="3">Page 3</div>
@@ -29,11 +30,16 @@
     </div>
 
     <!-- Modal for Diary Entries -->
+    <!-- This modal will pop up when a sticky note is clicked, allowing users to type in their diary entry -->
     <div class="modal hidden" id="note-modal">
         <div class="modal-content">
+            <h3>Write Your Diary Entry</h3>
+            <!-- Text area to write the diary entry -->
             <textarea id="note-text" placeholder="Write your diary entry..."></textarea>
             <div class="modal-buttons">
+                <!-- Button to save the diary entry -->
                 <button id="save-note">Save</button>
+                <!-- Button to close the modal -->
                 <button id="close-modal">Close</button>
             </div>
         </div>

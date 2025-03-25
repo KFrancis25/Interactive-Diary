@@ -1,0 +1,53 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Interactive Diary</title>
+    <link rel="stylesheet" type= "text/css" href="{% static "css/styles.css" %}">
+    <script src="{% static 'js/script.js' %}"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    
+    <nav class="navbar">
+        <h1>Stick 'n Write</h1>
+        <ul class="nav-links">
+            <li><a href="{% url 'account' %}">Account</a></li>
+            <li><a href="{% url 'login' %}">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sticky Note Grid -->
+    <div class="grid-container">
+        <!-- Sticky notes with unique IDs -->
+        <div class="grid-item" data-note="1">Page 1</div>
+        <div class="grid-item" data-note="2">Page 2</div>
+        <div class="grid-item" data-note="3">Page 3</div>
+        <div class="grid-item" data-note="4">Page 4</div>
+        <div class="grid-item" data-note="5">Page 5</div>
+        <div class="grid-item" data-note="6">Page 6</div>
+        <div class="grid-item" data-note="7">Page 7</div>
+        <div class="grid-item" data-note="8">Page 8</div>
+    </div>
+
+    <!-- Modal for Diary Entries -->
+    <!-- This modal will pop up when a sticky note is clicked, allowing users to type in their diary entry -->
+    <div class="modal hidden" id="note-modal">
+        <div class="modal-content">
+            <h3>Write Your Diary Entry</h3>
+            <!-- Text area to write the diary entry -->
+            <textarea id="note-text" placeholder="Write your diary entry..."></textarea>
+            <div class="modal-buttons">
+                <!-- Button to save the diary entry -->
+                <button id="save-note">Save</button>
+                <!-- Button to close the modal -->
+                <button id="close-modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
